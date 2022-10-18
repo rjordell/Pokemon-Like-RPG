@@ -1,39 +1,20 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=8913306&assignment_repo_type=AssignmentRepo)
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-Untitled Pokemon-like RPG
- > Your author list below should include links to all members GitHub (remove existing author).
  
+ # Untitled Pokemon-like RPG
  [Jordell Rodrigues](https://github.com/rjordell)
  [Kristin Chang](https://github.com/itskristnn)
  [Alessia Phang](https://github.com/aphan079)
  [Julian Ramos](https://github.com/jramo165)
 
-
- > ## Expectations
- > * The backend of your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
- > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
- > * **Each member of the group must actively participate in the Github Project board, writing unit tests, and reviewing commited code.**
-> * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
-
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include:
- > * Why is it important or interesting to you?
  We all enjoy RPG games, and we wanted to make something Pokemon-inspired and fun since we all grew up with the series.
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  We are planning only to use C++.
- > * What will be the input/output of your project?
  Input will be text or characters and output will be text on the command line.
- > * What are the features that the project provides?
  Features include...
  -A short, linear story
  -Type advantages similar to Pokemon (water is strong against fire, etc.)
  -5 different monsters to collect, train, and battle with
- > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
- > 
- > You also need to set up an empty project board using GitHub projects (board view). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added.
+
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
