@@ -16,6 +16,7 @@
  -5 different monsters to collect, train, and battle with
  -naming your battle partner
  -naming your character
+ -pokemon level system
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
