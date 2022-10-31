@@ -15,6 +15,17 @@
  -Type advantages similar to Pokemon (water is strong against fire, etc.)
  -5 different monsters to collect, train, and battle with
 
+```mermaid
+classDiagram
+    class Pokemon
+    Pokemon : +String ownerName
+    Pokemon : +String name
+    Pokemon : +Enum type
+    Pokemon : +int experience
+    Pokemon : +attack(enemy) void
+    Pokemon : +levelUp() void
+    Pokemon : +addExp
+```
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
