@@ -14,6 +14,9 @@
  -A short, linear story
  -Type advantages similar to Pokemon (water is strong against fire, etc.)
  -5 different monsters to collect, train, and battle with
+ -naming your battle partner
+ -naming your character
+ -pokemon level system
 
 ```mermaid
 classDiagram
