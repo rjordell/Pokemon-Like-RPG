@@ -54,6 +54,7 @@ classDiagram
 }
 
 Person<|--Player
+Person<|--NPC
 Pokemon "0..5" --> Player
 
 ```
