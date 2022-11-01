@@ -20,15 +20,44 @@
 
 ```mermaid
 classDiagram
-    class Pokemon
-    Pokemon : +String ownerName
-    Pokemon : +String name
-    Pokemon : +Enum type
-    Pokemon : +int experience
+    class Pokemon {
+    Pokemon : -String ownerName
+    Pokemon : -String name
+    Pokemon : -Enum type
+    Pokemon : -int experience
+    Pokemon : -int health
     Pokemon : +attack(enemy) void
     Pokemon : +levelUp() void
-    Pokemon : +addExp
+    Pokemon : +addExp() void
+    Pokemon : +changeHealth(int difference) void
+    Pokemon : +setPokemonName() void
+    Pokemon : +getPokemonName() void
+}
+    class Person {
+    Person : -String name
+    Person : +Person(string name)
+    Person : Person()
+    Person : Person()~
+    Person : setPersonName() void
+    Person : getPersonName() void
+}
+    class Player {
+    Player : List~Pokemon~ team
+    Player : catchPokemon() void
+    Player : addToTeam() void
+    Player : commandPokemon(Pokemon actionPokemon) void
+}
+    class NPC {
+    NPC : List~Pokemon~ team
+    NPC : commandPokemon(Pokemon actionPokemon) void
+    NPC : startFight() void
+}
+
+Person<|--Player
+Pokemon "0..5" --> Player
+
 ```
+
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
