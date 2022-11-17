@@ -36,22 +36,21 @@ classDiagram
 }
     class Person {
     Person : -String name
+    Person : -Vector~Pokemon~ team
     Person : +Person(string name)
-    Person : Person()
-    Person : Person()~
-    Person : setPersonName() void
-    Person : getPersonName() void
+    Person : +Person()
+    Person : +Person()~
+    Person : +setPersonName() void
+    Person : +getPersonName() void
 }
     class Player {
-    Player : List~Pokemon~ team
-    Player : catchPokemon() void
-    Player : addToTeam() void
-    Player : commandPokemon(Pokemon actionPokemon) void
+    Player : +catchPokemon() void
+    Player : +addToTeam() void
+    Player : +commandPokemon(Pokemon actionPokemon) void
 }
     class NPC {
-    NPC : List~Pokemon~ team
-    NPC : commandPokemon(Pokemon actionPokemon) void
-    NPC : startFight() void
+    NPC : +commandPokemon(Pokemon actionPokemon) void
+    NPC : +startFight() void
 }
 
 Person<|--Player
