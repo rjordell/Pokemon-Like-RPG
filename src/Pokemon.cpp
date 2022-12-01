@@ -13,7 +13,11 @@ Pokemon::Pokemon() {
     this->health = 100;
     this->PokemonType = FIRE;
 }
-    
+
+void Pokemon::getPokemonName() {
+    return this->name;
+}
+
 void Pokemon::setPokemonNickName() //supposed to be after choosing starter pokemon
 {
     string pokeNick;
