@@ -52,7 +52,7 @@ void Player::addToTeam(Pokemon newMember)
         }
     }
     //team.push_back(target->getPokemonName());
-
+}
 /*void Player::viewTeam() //Ended up adding this to the addToTeam Function
 {
     for(int i = 0 i < team.size(); i++)
