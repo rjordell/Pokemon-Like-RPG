@@ -1,5 +1,5 @@
-#include "../include/Pokemon.h"
-#include "../include/Person.h"
+//#include "../header/Pokemon.h"
+//#include "../header/Person.h"
 
 #include <iostream>
 #include <vector>
