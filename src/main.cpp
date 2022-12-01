@@ -14,7 +14,9 @@ Pokemon starter;
 Player user;
 
 void encounterWildPokemon() {
-    cout << endl << "*Wild pokemon event*" << endl;
+    //cout << endl << "*Wild pokemon event*" << endl;
+    starter.addExp();
+    user.team.at(0) = starter;
 }
 
 void fightNpc() {
@@ -106,11 +108,11 @@ int main() {
     cin >> startChoice;
     // TODO implement string validation for starter
     if (startChoice == '1'){
-        starter.assign("Charmander", Pokemon::type::FIRE, 100, 100, 1, 0);
+        starter.assign("Charmander", Pokemon::type::FIRE, 100, 100, 1, 0, 20);
     } else if (startChoice == '2'){
-        starter.assign("Squirtle", Pokemon::type::WATER, 100, 100, 1, 0);
+        starter.assign("Squirtle", Pokemon::type::WATER, 100, 100, 1, 0, 20);
     } else if (startChoice == '3'){
-        starter.assign("Bulbasaur", Pokemon::type::EARTH, 100, 100, 1, 0);
+        starter.assign("Bulbasaur", Pokemon::type::EARTH, 100, 100, 1, 0, 20);
     }
     starter.setPokemonNickName();
     user.assign(playerName, starter);

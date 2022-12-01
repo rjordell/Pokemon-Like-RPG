@@ -67,13 +67,13 @@ void Player::addToTeam(Pokemon newMember)
     //team.push_back(target->getPokemonName());
 }
 
-void Player::viewTeam()
-{
+void Player::viewTeam() {
     string underline = "\e[4m";
     string reset = "\e[0m\e[39m\e[49m";
     //cout << underline;
     //team.at(0).displayInfo();
     //cout << reset;
+    
     for(int i = 0; i < 3; i++) {
         if (team.at(i).getPokemonName() != ""){
             if (this->active == i){
