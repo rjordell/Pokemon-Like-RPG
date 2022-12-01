@@ -14,6 +14,9 @@ class Pokemon {
     friend class Person;
  public:
     Pokemon();
+    int experience;
+    int health;
+    Pokemon(string ownerName, string name, type PokemonType, int experience, int health);
     void attack(Pokemon enemy);
     void levelUp();
     void addExp();
