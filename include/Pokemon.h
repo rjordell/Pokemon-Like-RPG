@@ -17,6 +17,7 @@ class Pokemon {
    public:
       enum type {FIRE, WATER, EARTH};
       type PokemonType;
+      const char *typeNames[3] = { "Fire", "Water", "Earth" };
       Pokemon();
       void assign(string name, type PokemonType, int health, int maxHealth, int level, int experience);
       void attack(Pokemon enemy);

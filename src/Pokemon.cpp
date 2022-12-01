@@ -61,6 +61,19 @@ string Pokemon::getPokemonName() {
     return this->name;
 }
 
+// char* enumTostring(type PokemonType){
+//       switch(PokemonType){
+//          case FIRE:
+//             return "Fire";
+//          case WATER:
+//             return "Water";
+//          case EARTH:
+//             return "Earth";
+//          default:
+//             return "Fire";
+//       }
+//  }
+
 // void Pokemon::displayInfo() {
 //     char choice;
 //     cout << "Would you like to know more about " << this->name << "?" << endl;
@@ -87,13 +100,11 @@ void Pokemon::displayInfo() {
     string bold = "\e[1m";
     string reset = "\e[0m\e[39m\e[49m";
     if (this->nickName == "") {
-        cout << "Nickname: N/A" << endl;
+        cout << bold << "Lvl " << this->level << ". "<< this->name << reset << endl;
+        cout << "    " << typeNames[this->PokemonType] << " type " << this->name << endl << "    HP: " << this->health << "/" << this->maxHealth << " Exp: " << this->experience << "/100" << endl;
     }
     else {
-        cout << "Nickname: " << this->nickName << endl;
+        cout << bold << "Lvl " << this->level << ". "<< this->nickName << reset << endl;
+        cout << "    " << typeNames[this->PokemonType] << " type " << this->name << endl << "    HP: " << this->health << "/" << this->maxHealth << " Exp: " << this->experience << "/100" << endl;
     }
-        //cout << "Type: " << this->type << endl;
-        cout << "Health: " << this->health << endl;
-        cout << "Level: " << this->level << endl;
-        cout << "Experience: " << this->experience << endl;
 }
