@@ -14,7 +14,7 @@ Pokemon::Pokemon() {
     this->PokemonType = FIRE;
 }
 
-void Pokemon::getPokemonName() {
+string Pokemon::getPokemonName() {
     return this->name;
 }
 
