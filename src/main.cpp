@@ -99,11 +99,11 @@ int main() {
     // TODO implement string validation for starter
     Pokemon starter;
     if (startChoice == '1'){
-        starter.assign("Charmander", Pokemon::type::FIRE, 100, 1, 0);
+        starter.assign("Charmander", Pokemon::type::FIRE, 100, 100, 1, 0);
     } else if (startChoice == '2'){
-        starter.assign("Squirtle", Pokemon::type::WATER, 100, 1, 0);
+        starter.assign("Squirtle", Pokemon::type::WATER, 100, 100, 1, 0);
     } else if (startChoice == '3'){
-        starter.assign("Bulbasaur", Pokemon::type::EARTH, 100, 1, 0);
+        starter.assign("Bulbasaur", Pokemon::type::EARTH, 100, 100, 1, 0);
     }
     starter.setPokemonNickName();
     while (menu() == 1){

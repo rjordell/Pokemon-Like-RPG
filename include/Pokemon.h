@@ -10,6 +10,7 @@ class Pokemon {
       string nickName;
     
       int health;
+      int maxHealth;
       int level;
       int experience;
       friend class Person;
@@ -17,7 +18,7 @@ class Pokemon {
       enum type {FIRE, WATER, EARTH};
       type PokemonType;
       Pokemon();
-      void assign(string name, type PokemonType, int health, int level, int experience);
+      void assign(string name, type PokemonType, int health, int maxHealth, int level, int experience);
       void attack(Pokemon enemy);
       void changeHealth(int difference); //used for being damaged/healed
       void levelUp();
