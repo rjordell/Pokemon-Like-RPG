@@ -70,9 +70,6 @@ void Player::addToTeam(Pokemon newMember)
 void Player::viewTeam() {
     string underline = "\e[4m";
     string reset = "\e[0m\e[39m\e[49m";
-    //cout << underline;
-    //team.at(0).displayInfo();
-    //cout << reset;
     
     for(int i = 0; i < 3; i++) {
         if (team.at(i).getPokemonName() != ""){
@@ -82,4 +79,17 @@ void Player::viewTeam() {
             team.at(i).displayInfo();
         }
     }
+}
+
+void Player::healTeam() {
+    for(int i = 0; i < 3; i++) {
+        if (team.at(i).getPokemonName() != ""){
+            team.at(i).rest();
+        }
+    }
+    cout << endl << "Your team has been healed!" << endl;
+}
+
+void Player::addXp(int pkmn) {
+    team.at(pkmn).addExp();
 }
