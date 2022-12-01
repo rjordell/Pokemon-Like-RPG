@@ -11,12 +11,15 @@ using namespace std;
 
 int progress = 1;
 Pokemon starter;
+Pokemon pkmn2;
+Pokemon pkmn3;
 Player user;
 
 void encounterWildPokemon() {
-    //cout << endl << "*Wild pokemon event*" << endl;
     // Placeholder for testing
-    user.addXp(0);
+    //user.addXp(0);
+    user.catchPokemon(pkmn2);
+    user.catchPokemon(pkmn3);
 }
 
 void fightNpc() {
@@ -28,7 +31,6 @@ void rest() {
 }
 
 void viewTeam() {
-    cout << endl;
     user.viewTeam();
 }
 
@@ -116,6 +118,8 @@ int main() {
     }
     starter.setPokemonNickName();
     user.assign(playerName, starter);
+    pkmn2.assign("Pikachu", Pokemon::type::FIRE, 10, 60, 1, 0, 20);
+    pkmn3.assign("Diglett", Pokemon::type::EARTH, 10, 120, 1, 0, 20);
     while (menu() == 1){
 
     }
