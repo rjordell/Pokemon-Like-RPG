@@ -14,12 +14,23 @@ Pokemon starter;
 Pokemon pkmn2;
 Pokemon pkmn3;
 Player user;
+int temp = 0;
 
 void encounterWildPokemon() {
     // Placeholder for testing
     //user.addXp(0);
-    user.catchPokemon(pkmn2);
-    user.catchPokemon(pkmn3);
+    if (temp == 0){
+        user.addToTeam(pkmn2);
+    } else if (temp == 1){
+        user.addToTeam(pkmn3);
+        
+    } else {
+        user.addXp(user.active); 
+    }
+    //user.team.at(1).displayInfo();
+    //user.viewTeam();
+    temp++;
+    
 }
 
 void fightNpc() {
@@ -60,7 +71,7 @@ int menu() {
     char menuOption;
 
     cout << endl << "Here is a list of what you can do: " << endl;
-    cout << "1. Fight a wild Pokemon" << endl;
+    cout << "1. Catch a wild Pokemon" << endl;
     // TODO change this to trainer/gym leader names EG "Fight Trainer John!" or "Fight Gym Leader Roxy!" based on progress in story variable
     if (progress % 3 == 0){
         cout << "2. Fight the gym leader" << endl;
