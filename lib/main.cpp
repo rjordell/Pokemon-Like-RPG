@@ -49,7 +49,7 @@ int menu(){
     cout << endl << "Here is a list of what you can do: " << endl;
     cout << "1. Fight a wild Pokemon" << endl;
     // TODO change this to trainer/gym leader names EG "Fight Trainer John!" or "Fight Gym Leader Roxy!" based on progress in story variable
-    if (progress % 4 == 0){
+    if (progress % 3 == 0){
         cout << "2. Fight the gym leader" << endl;
     } else{
         cout << "2. Fight a trainer" << endl;
