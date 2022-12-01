@@ -77,9 +77,60 @@ The Pokemon class has various stats that can change as it is attacked, levels up
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+>Installation
+
+![Screenshot](screenshots/screenshot1.PNG)
+
+>Choose your name, choose your starter, then give nickname to your starter
+
+![Screenshot](screenshots/screenshot2.PNG)
+
+>Main menu for navigating the game with 6 options to choose from
+
+![Screenshot](screenshots/screenshot3.PNG)
+
+>Option 1 will catch wild pokemon until your party is full, then it gives experience to your active pokemon (underlined)
+
+![Screenshot](screenshots/screenshot4.PNG)
+
+>Option 2 is the main storyline, user fights 3 non playable characters in order of ascending difficulty
+
+![Screenshot](screenshots/screenshot5.PNG)
+
+>Option 4 shows all the pokemon in your team and their stats
+
+![Screenshot](screenshots/screenshot6.PNG)
+
+>Option 3 lets your pokemon rest to recover their health
+
+![Screenshot](screenshots/screenshot7.PNG)
+
+>Option 5 allows you to switch your active pokemon
+
+![Screenshot](screenshots/screenshot8.PNG)
+
+>Option 6 allows you to quit the game
+
+![Screenshot](screenshots/screenshot9.PNG)
+
+![Screenshot](screenshots/screenshot12.PNG)
+
+>Third Pokemon caught, team is full
+
+![Screenshot](screenshots/screenshot10.PNG)
+
+>Leveling/experience system. Second Pokemon got enough experience to level up to level 2, health and attack both increased.
+
+![Screenshot](screenshots/screenshot11.PNG)
+
+
  ## Installation/Usage
- > Instructions on installing and running your application
+ > Clone the respository
+ ```
+ $ git clone --recursive https://github.com/cs100/final-project-aphan079-jramo165-kchan270-jrodr495.git
+ $ g++ -o game -std=c++11 src/Person.cpp src/Pokemon.cpp src/main.cpp
+ $ ./game
+ ```
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
