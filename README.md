@@ -66,7 +66,7 @@ Person<|--Player
 Pokemon "0..5" --> Player
 
 ```
-The Pokemon class has various stats that can change as it is attacked, levels up, etc. The Player and NPC classes inherit from the Person class. Both players and NPCs can have up to 5 Pokemon on a team. Players can catch Pokemon and add them to the team. Both Players and NPCs can command Pokemon to perform moves. Pokemon can attack each other, gain experience, level up, lose and gain health, and have a custom name. Only NPCs can start battles with the player character.
+The Pokemon class has various stats that can change as it is attacked, levels up, etc. The Player and NPC classes inherit from the Person class. Both players and NPCs can have up to 3 Pokemon on a team. Players can catch Pokemon and add them to the team. Both Players and NPCs can command Pokemon to attack. Pokemon can attack each other, gain experience, level up, lose and gain health, and have a custom name. Only NPCs can battle with the player character.
 
  
  > ## Final deliverable
