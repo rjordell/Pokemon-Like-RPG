@@ -1,4 +1,4 @@
-#include "../include/Pokemon.h"
+#include "Pokemon.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -19,7 +19,6 @@ class Player : public Person {
  private:
 
  public:
-    void viewTeam();
     void catchPokemon(Pokemon& target);
     void addToTeam(Pokemon newMember);
     void commandPokemon(Pokemon actionPokemon);
