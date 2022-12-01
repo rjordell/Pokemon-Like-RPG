@@ -25,21 +25,21 @@ void Player::addToTeam(Pokemon newMember)
 {
     for(int i = 0; i < team.size(); i++)
     {
-        if(team.at(i) == nullptr)
+        if(team.at(i).getPokemonName() == "")
         {
             team.at(i) = newMember;
-            cout << "Added " << newMember << " to the team successfully~" << endl;
+            cout << "Added " << newMember.getPokemonName() << " to the team successfully~" << endl;
             cout << "Do you want to see your team?" << endl;
             string choice;
             if(choice == "YES" || choice == "yes" || choice == "Yes")
             {
-                for(int i = 0 i < team.size(); i++)
+                for(int i = 0; i < team.size(); i++)
                 {
                     if(i != 0)
                     {
                         cout << ", ";
                     }
-                    cout << team.at(i);
+                    cout << team.at(i).getPokemonName();
                     
                 }
                 break;
