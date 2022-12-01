@@ -19,16 +19,7 @@ void Player::catchPokemon(Pokemon& target) {
         }
     }
 
-    string choice;
-    cout << "You have no space to add " << target->getPokemonName() << " to your team. Send it to the storage box? Type yes or no." << endl;
-    cin >> choice;
-    if (choice == "yes" || choice == "y" || choice == "Yes" || choice == "YES") {
-        //sendToStorageBox(Pokemon& target);            need to implement a storage box for extra Pokemon
-
-    }
-    if (choice == "no" || choice == "n" || choice == "No" || choice == "NO") {
-        cout << "You let " << target->getPokemonName() << " escape..." << endl;
-    }
+    cout << "You have no space to add " << target->getPokemonName() << " to your team. You let " << target->getPokemonName() << " go..." << endl;
 
 
 }
