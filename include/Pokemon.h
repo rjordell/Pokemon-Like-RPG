@@ -7,7 +7,7 @@ class Pokemon {
  private:
     string name;
     string nickName;
-    enum type {FIRE, WATER, AIR};
+    enum type {FIRE, WATER, EARTH};
     type PokemonType;
     int health;
     int level;
