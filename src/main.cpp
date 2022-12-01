@@ -1,5 +1,5 @@
-//#include "../header/Pokemon.h"
-//#include "../header/Person.h"
+#include "../include/Pokemon.h"
+#include "../include/Person.h"
 
 #include <iostream>
 #include <vector>
@@ -7,7 +7,7 @@
 #include <stdio.h>
 using namespace std;
 
-// g++ -o game -std=c++11 main.cpp
+// g++ -o game -std=c++11 Person.cpp Pokemon.cpp main.cpp
 
 int progress = 1;
 
@@ -97,14 +97,15 @@ int main() {
     cout << "Please choose a starter from 1-3: ";
     cin >> startChoice;
     // TODO implement string validation for starter
-    // TODO set starter pokemon object to appropriate starter
+    Pokemon starter;
     if (startChoice == '1'){
-        cout << endl << "You have chosen Charmander! Great choice!" << endl;
+        starter.assign("Charmander", Pokemon::type::FIRE, 100, 1, 0);
     } else if (startChoice == '2'){
-        cout << endl << "You have chosen Squirtle! Great choice!" << endl;
+        starter.assign("Squirtle", Pokemon::type::WATER, 100, 1, 0);
     } else if (startChoice == '3'){
-        cout << endl << "You have chosen Bulbasaur! Great choice!" << endl;
+        starter.assign("Bulbasaur", Pokemon::type::EARTH, 100, 1, 0);
     }
+    starter.setPokemonNickName();
     while (menu() == 1){
 
     }
