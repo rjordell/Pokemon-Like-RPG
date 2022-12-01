@@ -7,9 +7,10 @@ class Pokemon {
  private:
     string ownerName;
     string name;
-    enum type {NORMAL, FIRE, WATER, GRASS, ELECTRIC, ICE, FIGHTINH, POISON, GROUND, FLYING, PSYCHIC, BUG, ROCK, GHOST, DRAGON, DARK, STEEL};
+    enum type {NORMAL, FIRE, WATER, GRASS, ELECTRIC, ICE, FIGHTING, POISON, GROUND, FLYING, PSYCHIC, BUG, ROCK, GHOST, DRAGON, DARK, STEEL};
     int experience;
     int health;
+    friend class Person;
  public:
     void attack(Pokemon enemy);
     void levelUp();

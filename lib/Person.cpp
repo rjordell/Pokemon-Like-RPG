@@ -21,5 +21,4 @@ void Player::catchPokemon(Pokemon& target) {
 
     cout << "You have no space to add " << target->getPokemonName() << " to your team. You let " << target->getPokemonName() << " go..." << endl;
 
-
 }
