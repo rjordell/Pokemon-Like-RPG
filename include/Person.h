@@ -8,8 +8,8 @@ using namespace std;
 class Person {
  private:
     string name;
-    vector<Pokemon *> team(3, nullptr);
  public:
+    vector<Pokemon> team = vector<Pokemon>(3);
     Person(string name);
     virtual void setPersonName() = 0;;
     string getPersonName();

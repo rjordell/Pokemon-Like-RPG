@@ -20,6 +20,7 @@ class Pokemon {
     void addExp();
     void changeHealth(int difference); //used for being damaged/healed
     void setPokemonNickName();
+    string getPokemonName();
     int getHP();
     int getLvl();
     int getXP();
