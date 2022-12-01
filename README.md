@@ -36,22 +36,21 @@ classDiagram
 }
     class Person {
     Person : -String name
+    Person : -Vector~Pokemon~ team
     Person : +Person(string name)
-    Person : Person()
-    Person : Person()~
-    Person : setPersonName() void
-    Person : getPersonName() void
+    Person : +Person()
+    Person : +Person()~
+    Person : +setPersonName() void
+    Person : +getPersonName() void
 }
     class Player {
-    Player : List~Pokemon~ team
-    Player : catchPokemon() void
-    Player : addToTeam() void
-    Player : commandPokemon(Pokemon actionPokemon) void
+    Player : +catchPokemon() void
+    Player : +addToTeam() void
+    Player : +commandPokemon(Pokemon actionPokemon) void
 }
     class NPC {
-    NPC : List~Pokemon~ team
-    NPC : commandPokemon(Pokemon actionPokemon) void
-    NPC : startFight() void
+    NPC : +commandPokemon(Pokemon actionPokemon) void
+    NPC : +startFight() void
 }
 
 Person<|--Player
@@ -60,7 +59,7 @@ Pokemon "0..5" --> Player
 Pokemon "0..5" --> NPC
 
 ```
-The Pokemon class has various stats that can change as it is attacked, levels up, etc. The Player and NPC classes inherit from the Person class. Both players and NPCs can have up to 5 Pokemon on a team. Players can catch Pokemon and add them to the team. Both Players and NPCs can command Pokemon to perform moves. Only NPCs can start battles with the player character.
+The Pokemon class has various stats that can change as it is attacked, levels up, etc. The Player and NPC classes inherit from the Person class. Both players and NPCs can have up to 5 Pokemon on a team. Players can catch Pokemon and add them to the team. Both Players and NPCs can command Pokemon to perform moves. Pokemon can attack each other, gain experience, level up, lose and gain health, and have a custom name. Only NPCs can start battles with the player character.
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.

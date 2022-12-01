@@ -7,11 +7,16 @@ class Pokemon {
  private:
     string ownerName;
     string name;
-    enum type {NORMAL, FIRE, WATER, GRASS, ELECTRIC, ICE, FIGHTINH, POISON, GROUND, FLYING, PSYCHIC, BUG, ROCK, GHOST, DRAGON, DARK, STEEL};
+    enum type {NORMAL, FIRE, WATER, GRASS, ELECTRIC, ICE, FIGHTING, POISON, GROUND, FLYING, PSYCHIC, BUG, ROCK, GHOST, DRAGON, DARK, STEEL};
+    type PokemonType;
     int experience;
     int health;
+    friend class Person;
  public:
-    Pokemon(string ownerName, string name, enum type, int experience, int health);
+    Pokemon();
+    int experience;
+    int health;
+    Pokemon(string ownerName, string name, type PokemonType, int experience, int health);
     void attack(Pokemon enemy);
     void levelUp();
     void addExp();
