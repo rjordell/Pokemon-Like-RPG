@@ -17,8 +17,6 @@ Player user;
 int temp = 0;
 
 void encounterWildPokemon() {
-    // Placeholder for testing
-    //user.addXp(0);
     if (temp == 0){
         user.addToTeam(pkmn2);
     } else if (temp == 1){
@@ -27,8 +25,6 @@ void encounterWildPokemon() {
     } else {
         user.addXp(user.active); 
     }
-    //user.team.at(1).displayInfo();
-    //user.viewTeam();
     temp++;
     
 }
@@ -47,8 +43,6 @@ void viewTeam() {
 
 void switchActive() {
     int newActive;
-    //cout << endl << "*switch active pokemon*" << endl;
-    //cout << endl << user.team.at(user.active).getPokemonName() << " Is your current active pokemon." << endl;
     user.viewTeam();
     cout << "Please choose a Pokemon from 1-3 to make your new active Pokemon: ";
     cin >> newActive;
