@@ -68,8 +68,8 @@ void Pokemon::displayInfo() {
     cout << bold << "Lvl " << this->level << ". "<< this->nickName << reset << endl;
     cout << "    " << typeNames[this->PokemonType] << " type " << this->name << endl;
     cout << "    HP: " << health << "/" << maxHealth << ", Attack: " << atkDmg << ", Exp: " << exp << "/" << expNeeded << endl;
+}
 
-    // cout << bold << "Lvl " << this->level << ". "<< this->nickName << reset << endl;
-    // cout << "    " << typeNames[this->PokemonType] << " type " << this->name << endl;
-    // cout << "    HP: " << this->health << "/" << this->maxHealth << ", Attack: " << this->atkDmg << ", Exp: " << this->exp << "/" << this->expNeeded << endl;
+void Pokemon::rest() {
+    this->health = this->maxHealth;
 }

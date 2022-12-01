@@ -25,6 +25,7 @@ class Pokemon {
       void assign(string name, type PokemonType, int health, int maxHealth, int level, int exp, int atkDmg);
       void attack(Pokemon enemy);
       void changeHealth(int difference); //used for being damaged/healed
+      void rest();
       void levelUp();
       void addExp();
       void setPokemonNickName();

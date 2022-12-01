@@ -25,4 +25,6 @@ class Player : public Person {
       void commandPokemon(Pokemon actionPokemon);
       void setName();
       void viewTeam();
+      void healTeam();
+      void addXp(int pkmn);
 };
