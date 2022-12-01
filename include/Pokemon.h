@@ -7,15 +7,16 @@ class Pokemon {
  private:
     string name;
     string nickName;
-    enum type {FIRE, WATER, EARTH};
-    type PokemonType;
+    
     int health;
     int level;
     int experience;
     friend class Person;
  public:
+    enum type {FIRE, WATER, EARTH};
+    type PokemonType;
     Pokemon();
-    Pokemon(string name, type PokemonType, int health, int level, int experience);
+    void assign(string name, type PokemonType, int health, int level, int experience);
     void attack(Pokemon enemy);
     void addExp();
     void changeHealth(int difference); //used for being damaged/healed
