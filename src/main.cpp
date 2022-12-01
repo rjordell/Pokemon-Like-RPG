@@ -10,6 +10,7 @@ using namespace std;
 // g++ -o game -std=c++11 Person.cpp Pokemon.cpp main.cpp
 
 int progress = 1;
+Pokemon starter;
 
 void encounterWildPokemon() {
     cout << endl << "*Wild pokemon event*" << endl;
@@ -24,7 +25,9 @@ void rest() {
 }
 
 void viewPkmn() {
-    cout << endl << "*view your pokemon*" << endl;
+    //cout << endl << "*view your pokemon*" << endl;
+    cout << endl;
+    starter.displayInfo();
 }
 
 void switchActive() {
@@ -97,13 +100,12 @@ int main() {
     cout << "Please choose a starter from 1-3: ";
     cin >> startChoice;
     // TODO implement string validation for starter
-    Pokemon starter;
     if (startChoice == '1'){
-        starter.assign("Charmander", Pokemon::type::FIRE, 100, 1, 0);
+        starter.assign("Charmander", Pokemon::type::FIRE, 100, 100, 1, 0);
     } else if (startChoice == '2'){
-        starter.assign("Squirtle", Pokemon::type::WATER, 100, 1, 0);
+        starter.assign("Squirtle", Pokemon::type::WATER, 100, 100, 1, 0);
     } else if (startChoice == '3'){
-        starter.assign("Bulbasaur", Pokemon::type::EARTH, 100, 1, 0);
+        starter.assign("Bulbasaur", Pokemon::type::EARTH, 100, 100, 1, 0);
     }
     starter.setPokemonNickName();
     while (menu() == 1){
