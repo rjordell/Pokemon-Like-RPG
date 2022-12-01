@@ -6,12 +6,13 @@ using namespace std;
 
 class Pokemon {
    private:
-      string name;
+      
       string nickName;
     
       
       friend class Person;
    public:
+      string name;
       int health;
       int maxHealth;
       int level;

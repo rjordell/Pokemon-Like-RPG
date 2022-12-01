@@ -34,45 +34,23 @@ void Player::catchPokemon(Pokemon& target) {
     cout << "You have no space to add " << target.getPokemonName() << " to your team. You let " << target.getPokemonName() << " go..." << endl;
 }
 
-void Player::addToTeam(Pokemon newMember)
-{
-    for(int i = 0; i < team.size(); i++)
-    {
-        if(team.at(i).getPokemonName() == "")
-        {
+void Player::addToTeam(Pokemon newMember) {
+    for(int i = 0; i < 3; i++) {
+        if(team.at(i).level == 0){
             team.at(i) = newMember;
-            cout << "Added " << newMember.getPokemonName() << " to the team successfully~" << endl;
-            cout << "Do you want to see your team?" << endl;
-            string choice;
-            if(choice == "YES" || choice == "yes" || choice == "Yes")
-            {
-                for(int i = 0; i < team.size(); i++)
-                {
-                    if(i != 0)
-                    {
-                        cout << ", ";
-                    }
-                    cout << team.at(i).getPokemonName();
-                    
-                }
-                break;
-            }
-            else
-            {
-                break;
-            }
-            
+            cout << endl << newMember.name << " has been caught!" << endl;
+            team.at(i).setPokemonNickName();
+            break; 
         }
     }
-    //team.push_back(target->getPokemonName());
 }
 
 void Player::viewTeam() {
     string underline = "\e[4m";
     string reset = "\e[0m\e[39m\e[49m";
-    
+    cout << endl;
     for(int i = 0; i < 3; i++) {
-        if (team.at(i).getPokemonName() != ""){
+        if (team.at(i).level != 0){
             if (this->active == i){
                 cout << underline;
             }
@@ -83,7 +61,7 @@ void Player::viewTeam() {
 
 void Player::healTeam() {
     for(int i = 0; i < 3; i++) {
-        if (team.at(i).getPokemonName() != ""){
+        if (team.at(i).level != 0){
             team.at(i).rest();
         }
     }
