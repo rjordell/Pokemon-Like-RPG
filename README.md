@@ -39,7 +39,7 @@ classDiagram
     Person : +Person(string name)
     Person : Person()
     Person : Person()~
-    Person : setPersonName() void
+    Person  : setPersonName() void
     Person : getPersonName() void
 }
     class Player {
