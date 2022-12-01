@@ -38,7 +38,7 @@ void Player::addToTeam(Pokemon newMember) {
     for(int i = 0; i < 3; i++) {
         if(team.at(i).level == 0){
             team.at(i) = newMember;
-            cout << "Added " << newMember.getPokemonName() << " to the team successfully" << endl;
+            cout << endl << newMember.name << " has been caught!" << endl;
             team.at(i).setPokemonNickName();
             break; 
         }
