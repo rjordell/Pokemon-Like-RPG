@@ -11,6 +11,7 @@ using namespace std;
 
 int progress = 1;
 Pokemon starter;
+Player user;
 
 void encounterWildPokemon() {
     cout << endl << "*Wild pokemon event*" << endl;
@@ -24,14 +25,19 @@ void rest() {
     cout << endl << "*rest*" << endl;
 }
 
-void viewPkmn() {
-    //cout << endl << "*view your pokemon*" << endl;
+void viewTeam() {
     cout << endl;
-    starter.displayInfo();
+    user.viewTeam();
 }
 
 void switchActive() {
-    cout << endl << "*switch active pokemon*" << endl;
+    int newActive;
+    //cout << endl << "*switch active pokemon*" << endl;
+    //cout << endl << user.team.at(user.active).getPokemonName() << " Is your current active pokemon." << endl;
+    user.viewTeam();
+    cout << "Please choose a Pokemon from 1-3 to make your new active Pokemon: ";
+    cin >> newActive;
+    user.active = newActive - 1;
 }
 
 int quitGame() {
@@ -58,7 +64,7 @@ int menu() {
         cout << "2. Fight a trainer" << endl;
     }
     cout << "3. Rest" << endl;
-    cout << "4. View your Pokemon" << endl;
+    cout << "4. View your Team" << endl;
     cout << "5. Switch your active Pokemon" << endl;
     cout << "6. Quit the game" << endl;
     cout << "Please choose an option from 1-6: ";
@@ -70,7 +76,7 @@ int menu() {
     } else if (menuOption == '3'){
         rest();
     } else if (menuOption == '4'){
-        viewPkmn();
+        viewTeam();
     } else if (menuOption == '5'){
         switchActive();
     } else if (menuOption == '6'){
@@ -82,7 +88,6 @@ int menu() {
 }
 
 int main() {
-    bool first = true;
     string playerName;
     char startChoice;
 
@@ -108,6 +113,7 @@ int main() {
         starter.assign("Bulbasaur", Pokemon::type::EARTH, 100, 100, 1, 0);
     }
     starter.setPokemonNickName();
+    user.assign(playerName, starter);
     while (menu() == 1){
 
     }

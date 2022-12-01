@@ -7,13 +7,13 @@
 using namespace std;
 
 Pokemon::Pokemon() {
-    this->name = "";
-    this->PokemonType = FIRE;
-    this->nickName = "";
-    this->health = 100;
-    this->maxHealth = 100;
-    this->level;    
-    this->experience = 0;
+    // this->name = "";
+    // this->PokemonType = FIRE;
+    // this->nickName = "";
+    // this->health = 100;
+    // this->maxHealth = 100;
+    // this->level;    
+    // this->experience = 0;
 }
 
 void Pokemon::assign(string name, type PokemonType, int health, int maxHealth, int level, int experience){

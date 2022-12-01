@@ -6,6 +6,19 @@
 #include <vector>
 using namespace std;
 
+Person::Person() {
+    this->name = "";
+}
+
+void Person::assign(string name, Pokemon starter) {
+    this->name = name;
+    team.at(0) = starter;
+}
+
+string Person::getName() {
+    return this->name;
+}
+
 void Player::catchPokemon(Pokemon& target) {
     cout << "You threw a Pokeball at " << target.getPokemonName() << "!" << endl;
     
@@ -53,14 +66,20 @@ void Player::addToTeam(Pokemon newMember)
     }
     //team.push_back(target->getPokemonName());
 }
-/*void Player::viewTeam() //Ended up adding this to the addToTeam Function
+
+void Player::viewTeam()
 {
-    for(int i = 0 i < team.size(); i++)
-    {
-        if(i != 0)
-        {
-            cout << ", ";
+    string underline = "\e[4m";
+    string reset = "\e[0m\e[39m\e[49m";
+    //cout << underline;
+    //team.at(0).displayInfo();
+    //cout << reset;
+    for(int i = 0; i < 3; i++) {
+        if (team.at(i).getPokemonName() != ""){
+            if (this->active == i){
+                cout << underline;
+            }
+            team.at(i).displayInfo();
         }
-        cout << team.at(i);
     }
-}*/
+}

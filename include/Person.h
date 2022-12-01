@@ -10,16 +10,19 @@ class Person {
       string name;
    public:
       vector<Pokemon> team = vector<Pokemon>(3);
-      Person(string name);
-      virtual void setPersonName() = 0;;
-      string getPersonName();
+      Person();
+      void assign(string name, Pokemon starter);
+      string getName();
 };
 
 class Player : public Person {
    private:
-
+   
    public:
+      int active = 0;
       void catchPokemon(Pokemon& target);
       void addToTeam(Pokemon newMember);
       void commandPokemon(Pokemon actionPokemon);
+      void setName();
+      void viewTeam();
 };
