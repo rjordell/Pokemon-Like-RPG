@@ -22,36 +22,44 @@
  ```mermaid
 classDiagram
     class Pokemon {
-    Pokemon : -String ownerName
-    Pokemon : -String name
-    Pokemon : -Enum type
-    Pokemon : -int experience
-    Pokemon : -int health
+    Pokemon : -string nickName
+    Pokemon : +string name
+    Pokemon : +int health
+    Pokemon : +int maxHealth
+    Pokemon : +int level
+    Pokemon : +int exp
+    Pokemon : +int expNeeded
+    Pokemon : +int atkDmg
+    Pokemon : +enum type {FIRE, WATER, EARTH}
+    Pokemon : +type PokemonType
+    Pokemon : +const char *typeNames
+    Pokemon : +Pokemon()
+    Pokemon : +assign(string name, type PokemonType, int health, int maxHealth, int level, int exp, int atkDmg) void
     Pokemon : +attack(enemy) void
+    Pokemon : +changeHealth(int difference) void
+    Pokemon : +rest() void
     Pokemon : +levelUp() void
     Pokemon : +addExp() void
-    Pokemon : +changeHealth(int difference) void
     Pokemon : +setPokemonName() void
-    Pokemon : +getPokemonName() void
+    Pokemon : +string getPokemonName()
     Pokemon : +displayInfo() void
 }
     class Person {
     Person : -String name
-    Person : -Vector~Pokemon~ team
-    Person : +Person(string name)
+    Person : +Vector~Pokemon~ team
     Person : +Person()
-    Person : +Person()~
-    Person : +setPersonName() void
-    Person : +getPersonName() void
+    Person : +assign(string name, Pokemon starter) void
+    Person : +string getName();
 }
     class Player {
-    Player : +catchPokemon() void
-    Player : +addToTeam() void
+    Player : +int active
+    Player : +catchPokemon(Pokemon& target) void
+    Player : +addToTeam(Pokemon newMember) void
     Player : +commandPokemon(Pokemon actionPokemon) void
-}
-    class NPC {
-    NPC : +commandPokemon(Pokemon actionPokemon) void
-    NPC : +startFight() void
+    Player : +setName() void
+    Player : +viewTeam() void
+    Player : +healTeam() void
+    Player : +addXp(int pkmn) void
 }
 
 Person<|--Player
