@@ -19,13 +19,11 @@ class Pokemon {
       Pokemon();
       void assign(string name, type PokemonType, int health, int level, int experience);
       void attack(Pokemon enemy);
-      void addExp();
       void changeHealth(int difference); //used for being damaged/healed
+      void addExp();
       void setPokemonNickName();
       string getPokemonName();
-      int getHP();
-      int getLvl();
-      int getXP();
+      void displayInfo();
 };
 
 #endif
