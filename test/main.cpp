@@ -9,7 +9,7 @@ using namespace std;
 
 // g++ -o game -std=c++11 main.cpp
 
-int progress = 0;
+int progress = 1;
 
 void encounterWildPokemon() {
     cout << endl << "*Wild pokemon event*" << endl;
@@ -21,6 +21,14 @@ void fightNpc() {
 
 void rest() {
     cout << endl << "*rest*" << endl;
+}
+
+void viewPkmn() {
+    cout << endl << "*view your pokemon*" << endl;
+}
+
+void switchActive() {
+    cout << endl << "*switch active pokemon*" << endl;
 }
 
 int quitGame() {
@@ -41,14 +49,16 @@ int menu() {
     cout << endl << "Here is a list of what you can do: " << endl;
     cout << "1. Fight a wild Pokemon" << endl;
     // TODO change this to trainer/gym leader names EG "Fight Trainer John!" or "Fight Gym Leader Roxy!" based on progress in story variable
-    if (progress % 4 == 0){
+    if (progress % 3 == 0){
         cout << "2. Fight the gym leader" << endl;
     } else{
         cout << "2. Fight a trainer" << endl;
     }
     cout << "3. Rest" << endl;
-    cout << "4. Quit the game" << endl;
-    cout << "Please choose an option from 1-4: ";
+    cout << "4. View your Pokemon" << endl;
+    cout << "5. Switch your active Pokemon" << endl;
+    cout << "6. Quit the game" << endl;
+    cout << "Please choose an option from 1-6: ";
     cin >> menuOption;
     if (menuOption == '1'){
         encounterWildPokemon();
@@ -57,6 +67,10 @@ int menu() {
     } else if (menuOption == '3'){
         rest();
     } else if (menuOption == '4'){
+        viewPkmn();
+    } else if (menuOption == '5'){
+        switchActive();
+    } else if (menuOption == '6'){
         if (quitGame() == 0){
             return 0;
         }
