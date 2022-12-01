@@ -61,19 +61,6 @@ string Pokemon::getPokemonName() {
     return this->name;
 }
 
-// char* enumTostring(type PokemonType){
-//       switch(PokemonType){
-//          case FIRE:
-//             return "Fire";
-//          case WATER:
-//             return "Water";
-//          case EARTH:
-//             return "Earth";
-//          default:
-//             return "Fire";
-//       }
-//  }
-
 // void Pokemon::displayInfo() {
 //     char choice;
 //     cout << "Would you like to know more about " << this->name << "?" << endl;
