@@ -7,25 +7,26 @@
 using namespace std;
 
 Pokemon::Pokemon() {
-    this->ownerName = "";
     this->name = "";
+    this->nickName = "";
     this->experience = 0;
     this->health = 100;
-    this->PokemonType = NORMAL;
-}
-
-string Pokemon::getPokemonName() 
-{
-    return this->name;
+    this->PokemonType = FIRE;
 }
     
-void Pokemon::setPokemonName() //supposed to be after choosing starter pokemon
+void Pokemon::setPokemonNickName() //supposed to be after choosing starter pokemon
 {
-    string pokeName;
-    cout << "Great choice! What would you like to name your partner?" << endl;
-    cin >> pokeName;
-    cout << "Great name! Have fun on your journey!" << endl;
-    this->name = pokeName;
+    string pokeNick;
+    char choice;
+    cout << "Would you like to give a nickname to your Pokemon?" << endl;
+    cout << endl << "Type 'y' for yes or 'n' for no: ";
+    cin >> choice;
+    if (choice == 'y'){
+        cout << "Please type in a nickname: ";
+        cin >> pokeNick;
+    }
+    cout << endl << "Great name! Have fun on your journey!" << endl;
+    this->nickName = pokeNick;
 }
 
 void addExp()
