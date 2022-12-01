@@ -38,17 +38,10 @@ classDiagram
     Person : -String name
     Person : -Vector~Pokemon~ team
     Person : +Person(string name)
-<<<<<<< HEAD
-    Person : Person()
-    Person : Person()~
-    Person  : setPersonName() void
-    Person : getPersonName() void
-=======
     Person : +Person()
     Person : +Person()~
     Person : +setPersonName() void
     Person : +getPersonName() void
->>>>>>> 23c5b277d4e0c9eca65ce54f895cbbbddcc67389
 }
     class Player {
     Player : +catchPokemon() void
