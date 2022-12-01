@@ -1,25 +1,27 @@
 #include "Pokemon.h"
+
 #include <iostream>
 #include <string>
 #include <vector>
-
 using namespace std;
 
 class Person {
- private:
-    string name;
-    vector<Pokemon *> team(3, nullptr);
- public:
-    Person(string name);
-    virtual void setPersonName() = 0;;
-    string getPersonName();
+   private:
+      string name;
+   public:
+      vector<Pokemon> team = vector<Pokemon>(3);
+      Person(string name);
+      virtual void setPersonName() = 0;
+      string getPersonName();
 };
 
 class Player : public Person {
- private:
+   private:
 
- public:
-    void catchPokemon(Pokemon& target);
-    void addToTeam(Pokemon newMember);
-    void commandPokemon(Pokemon actionPokemon);
+   public:
+      void catchPokemon(Pokemon& target);
+      void addToTeam(Pokemon newMember);
+      void commandPokemon(Pokemon actionPokemon);
 };
+
+#endif

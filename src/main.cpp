@@ -1,5 +1,5 @@
-//#include "../header/Pokemon.h"
-//#include "../header/Person.h"
+#include "../include/Pokemon.h"
+#include "../include/Person.h"
 
 #include <iostream>
 #include <vector>
@@ -7,7 +7,7 @@
 #include <stdio.h>
 using namespace std;
 
-// g++ -o game -std=c++11 main.cpp
+// g++ -o game -std=c++11 Person.cpp Pokemon.cpp main.cpp
 
 int progress = 1;
 
@@ -49,9 +49,9 @@ int menu() {
     cout << endl << "Here is a list of what you can do: " << endl;
     cout << "1. Fight a wild Pokemon" << endl;
     // TODO change this to trainer/gym leader names EG "Fight Trainer John!" or "Fight Gym Leader Roxy!" based on progress in story variable
-    if (progress % 3 == 0){
+    if (progress % 3 == 0) {
         cout << "2. Fight the gym leader" << endl;
-    } else{
+    } else {
         cout << "2. Fight a trainer" << endl;
     }
     cout << "3. Rest" << endl;
@@ -60,18 +60,18 @@ int menu() {
     cout << "6. Quit the game" << endl;
     cout << "Please choose an option from 1-6: ";
     cin >> menuOption;
-    if (menuOption == '1'){
+    if (menuOption == '1') {
         encounterWildPokemon();
-    } else if (menuOption == '2'){
+    } else if (menuOption == '2') {
         fightNpc();
-    } else if (menuOption == '3'){
+    } else if (menuOption == '3') {
         rest();
-    } else if (menuOption == '4'){
+    } else if (menuOption == '4') {
         viewPkmn();
-    } else if (menuOption == '5'){
+    } else if (menuOption == '5') {
         switchActive();
-    } else if (menuOption == '6'){
-        if (quitGame() == 0){
+    } else if (menuOption == '6') {
+        if (quitGame() == 0) {
             return 0;
         }
     }
@@ -97,17 +97,17 @@ int main() {
     cout << "Please choose a starter from 1-3: ";
     cin >> startChoice;
     // TODO implement string validation for starter
-    // TODO set starter pokemon object to appropriate starter
-    if (startChoice == '1'){
-        cout << endl << "You have chosen Charmander! Great choice!" << endl;
-    } else if (startChoice == '2'){
-        cout << endl << "You have chosen Squirtle! Great choice!" << endl;
-    } else if (startChoice == '3'){
-        cout << endl << "You have chosen Bulbasaur! Great choice!" << endl;
+    Pokemon starter;
+    if (startChoice == '1') {
+        starter.assign("Charmander", Pokemon::type::FIRE, 100, 1, 0);
+    } else if (startChoice == '2') {
+        starter.assign("Squirtle", Pokemon::type::WATER, 100, 1, 0);
+    } else if (startChoice == '3') {
+        starter.assign("Bulbasaur", Pokemon::type::GRASS, 100, 1, 0);
     }
-    while (menu() == 1){
+    starter.setPokemonNickName();
+    while (menu() == 1) {
 
     }
     return 0;
-
 }
