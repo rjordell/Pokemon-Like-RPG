@@ -33,6 +33,7 @@ classDiagram
     Pokemon : +changeHealth(int difference) void
     Pokemon : +setPokemonName() void
     Pokemon : +getPokemonName() void
+    Pokemon : +displayInfo() void
 }
     class Person {
     Person : -String name
