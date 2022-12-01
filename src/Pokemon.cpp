@@ -1,8 +1,9 @@
-#include "Pokemon.h"
-#include "Person.h"
-
+#include "../include/Pokemon.h"
+#include "../include/Person.h"
 #include <iostream>
 #include <string>
+#include <vector>
+
 using namespace std;
 
 Pokemon::Pokemon() {
@@ -26,4 +27,17 @@ void Pokemon::setPokemonNickName() //supposed to be after choosing starter pokem
     }
     cout << endl << "Great name! Have fun on your journey!" << endl;
     this->nickName = pokeNick;
+}
+
+void addExp()
+{
+    int experience;
+    experience = experience + 25;
+    cout << "You have gained 25 experience!";
+    if(experience % 25 == 0)
+    {
+        level++;
+    }
+    cout << "You have " << experience << "exp!" << endl;
+
 }
