@@ -17,8 +17,9 @@ class Person {
 
 class Player : public Person {
    private:
-      int active = 0;
+   
    public:
+      int active = 0;
       void catchPokemon(Pokemon& target);
       void addToTeam(Pokemon newMember);
       void commandPokemon(Pokemon actionPokemon);

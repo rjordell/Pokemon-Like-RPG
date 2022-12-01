@@ -31,7 +31,13 @@ void viewTeam() {
 }
 
 void switchActive() {
-    cout << endl << "*switch active pokemon*" << endl;
+    int newActive;
+    //cout << endl << "*switch active pokemon*" << endl;
+    //cout << endl << user.team.at(user.active).getPokemonName() << " Is your current active pokemon." << endl;
+    user.viewTeam();
+    cout << "Please choose a Pokemon from 1-3 to make your new active Pokemon: ";
+    cin >> newActive;
+    user.active = newActive - 1;
 }
 
 int quitGame() {
@@ -82,7 +88,6 @@ int menu() {
 }
 
 int main() {
-    //bool first = true;
     string playerName;
     char startChoice;
 
@@ -109,8 +114,6 @@ int main() {
     }
     starter.setPokemonNickName();
     user.assign(playerName, starter);
-    //cout << endl << user.getName() << endl;
-    //user.team.at(0).displayInfo();
     while (menu() == 1){
 
     }
