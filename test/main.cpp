@@ -1,37 +1,37 @@
-//#include "../include/Pokemon.h"
-//#include "../include/Person.h"
+#include "../include/Pokemon.h"
+#include "../include/Person.h"
+
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
 #include <stdio.h>
-
 using namespace std;
 
 // g++ -o game -std=c++11 main.cpp
 
 int progress = 1;
 
-void encounterWildPokemon(){
+void encounterWildPokemon() {
     cout << endl << "*Wild pokemon event*" << endl;
 }
 
-void fightNpc(){
+void fightNpc() {
     cout << endl << "*trainer/gym leader event*" << endl;
 }
 
-void rest(){
+void rest() {
     cout << endl << "*rest*" << endl;
 }
 
-void viewPkmn(){
+void viewPkmn() {
     cout << endl << "*view your pokemon*" << endl;
 }
 
-void switchActive(){
+void switchActive() {
     cout << endl << "*switch active pokemon*" << endl;
 }
 
-int quitGame(){
+int quitGame() {
     char choice;
     cout << endl << "Do you really want to quit the game and lose all your progress?";
     cout << endl << "Type 'y' for yes or 'n' for no: ";
@@ -43,7 +43,7 @@ int quitGame(){
     return 1;
 }
 
-int menu(){
+int menu() {
     char menuOption;
 
     cout << endl << "Here is a list of what you can do: " << endl;
@@ -79,11 +79,9 @@ int menu(){
 }
 
 int main() {
-
     bool first = true;
     string playerName;
     char startChoice;
-
 
     cout << "Welcome to Pokemon! What is your name?: ";
     cin >> playerName;
