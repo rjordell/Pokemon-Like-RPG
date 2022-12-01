@@ -11,7 +11,7 @@ Pokemon::Pokemon() {
     this->nickname = "";
     this->PokemonType = FIRE;
     this->health = 100;
-    this->level;
+    this->level = 1;
     this->experience = 0;
 }
 
@@ -25,15 +25,18 @@ void Pokemon::assign(string name, type PokemonType, int health, int level, int e
 
 void Pokemon::addXP()
 {
-    int experience;
-    experience = experience + 25;
+    this->experience += 25;
     cout << "You have gained 25 experience!";
     if(experience % 25 == 0)
     {
-        level++;
+        levelUp();
     }
-    cout << "You have " << experience << "exp!" << endl;
+    cout << "You have " << this->experience << "experience!" << endl;
+}
 
+void Pokemon::levelUp() {
+    this->level++;
+    cout << this->name << " leveled up. They are level " << this->level << " now!" << endl;
 }
 
 void Pokemon::setPokemonNickName() //supposed to be after choosing starter pokemon
