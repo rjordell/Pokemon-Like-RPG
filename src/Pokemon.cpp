@@ -1,18 +1,18 @@
 #include "../include/Pokemon.h"
 #include "../include/Person.h"
-
 #include <iostream>
 #include <string>
 #include <vector>
+
 using namespace std;
 
 Pokemon::Pokemon() {
     this->name = "";
     this->PokemonType = FIRE;
     this->nickName = "";
-    this->experience = 0;
     this->health = 100;
-    this->level;
+    this->level;    
+    this->experience = 0;
 }
 
 string Pokemon::getPokemonName() {
