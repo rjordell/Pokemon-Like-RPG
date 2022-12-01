@@ -1,16 +1,23 @@
 #include "../include/Pokemon.h"
-#include "Person.h"
+#include "../include/Person.h"
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
+Pokemon::Pokemon() {
+    this->ownerName = "";
+    this->name = "";
+    this->experience = 0;
+    this->health = 100;
+    this->PokemonType = NORMAL;
+}
+
 string Pokemon::getPokemonName() 
 {
     return this->name;
 }
-    
     
 void Pokemon::setPokemonName() //supposed to be after choosing starter pokemon
 {

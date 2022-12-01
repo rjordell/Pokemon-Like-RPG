@@ -18,7 +18,8 @@
  -naming your character
  -pokemon level system
 
-```mermaid
+## Class Diagram
+ ```mermaid
 classDiagram
     class Pokemon {
     Pokemon : -String ownerName
@@ -32,56 +33,34 @@ classDiagram
     Pokemon : +changeHealth(int difference) void
     Pokemon : +setPokemonName() void
     Pokemon : +getPokemonName() void
+    Pokemon : +displayInfo() void
 }
     class Person {
     Person : -String name
+    Person : -Vector~Pokemon~ team
     Person : +Person(string name)
-    Person : Person()
-    Person : Person()~
-    Person : setPersonName() void
-    Person : getPersonName() void
+    Person : +Person()
+    Person : +Person()~
+    Person : +setPersonName() void
+    Person : +getPersonName() void
 }
     class Player {
-    Player : List~Pokemon~ team
-    Player : catchPokemon() void
-    Player : addToTeam() void
-    Player : commandPokemon(Pokemon actionPokemon) void
+    Player : +catchPokemon() void
+    Player : +addToTeam() void
+    Player : +commandPokemon(Pokemon actionPokemon) void
 }
     class NPC {
-    NPC : List~Pokemon~ team
-    NPC : commandPokemon(Pokemon actionPokemon) void
-    NPC : startFight() void
+    NPC : +commandPokemon(Pokemon actionPokemon) void
+    NPC : +startFight() void
 }
 
 Person<|--Player
+Person<|--NPC
 Pokemon "0..5" --> Player
+Pokemon "0..5" --> NPC
 
 ```
-
- > ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to:
- > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Break down the "Epics" into smaller actionable user stories (i.e. smaller development tasks). Convert them into issues and assign them to team members. Place these in the `TODO` column.
- >   * These cards should represent roughly 7 days worth of development time for your team. Then, once the sprint is over you should be repeating these steps to plan a new sprint, taking you until your second scrum meeting with the reader in phase III.
- > * Schedule two check-ins using Calendly. You need to pick both time slots during your lab on week 6. Your entire team must be present for both check-ins.
- >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
- >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
- >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members
-## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
- 
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- > * Before the meeting you should perform a sprint plan like you did in Phase I.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
-> 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
+The Pokemon class has various stats that can change as it is attacked, levels up, etc. The Player and NPC classes inherit from the Person class. Both players and NPCs can have up to 5 Pokemon on a team. Players can catch Pokemon and add them to the team. Both Players and NPCs can command Pokemon to perform moves. Pokemon can attack each other, gain experience, level up, lose and gain health, and have a custom name. Only NPCs can start battles with the player character.
 
  
  > ## Final deliverable
