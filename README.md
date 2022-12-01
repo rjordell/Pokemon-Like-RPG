@@ -30,7 +30,7 @@ classDiagram
     Pokemon : +int exp
     Pokemon : +int expNeeded
     Pokemon : +int atkDmg
-    Pokemon : +enum type {FIRE, WATER, EARTH}
+    Pokemon : +enum type
     Pokemon : +type PokemonType
     Pokemon : +const char *typeNames
     Pokemon : +Pokemon()
