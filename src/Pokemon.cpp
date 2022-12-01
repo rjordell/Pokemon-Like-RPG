@@ -29,7 +29,7 @@ void Pokemon::setPokemonNickName() //supposed to be after choosing starter pokem
     this->nickName = pokeNick;
 }
 
-void addExp()
+void Pokemon::addExp()
 {
     int experience;
     experience = experience + 25;
