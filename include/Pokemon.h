@@ -7,23 +7,25 @@ using namespace std;
 class Pokemon {
    private:
       string name;
-      string nickname;
+      string nickName;
     
       int health;
       int level;
       int experience;
       friend class Person;
    public:
-      enum type {FIRE, WATER, GRASS};
+      enum type {FIRE, WATER, EARTH};
       type PokemonType;
       Pokemon();
       void assign(string name, type PokemonType, int health, int level, int experience);
       void attack(Pokemon enemy);
-      void addXP();
-      void levelUp();
-      void changeHP(int difference); //used for being damaged/healed
+      void addExp();
+      void changeHealth(int difference); //used for being damaged/healed
       void setPokemonNickName();
-      void displayInfo();
+      string getPokemonName();
+      int getHP();
+      int getLvl();
+      int getXP();
 };
 
 #endif
