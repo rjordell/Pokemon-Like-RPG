@@ -26,9 +26,7 @@ void rest() {
 }
 
 void viewTeam() {
-    //cout << endl << "*view your team*" << endl;
     cout << endl;
-    //starter.displayInfo();
     user.viewTeam();
 }
 
@@ -84,7 +82,7 @@ int menu() {
 }
 
 int main() {
-    bool first = true;
+    //bool first = true;
     string playerName;
     char startChoice;
 
@@ -111,8 +109,8 @@ int main() {
     }
     starter.setPokemonNickName();
     user.assign(playerName, starter);
-    cout << endl << user.getName() << endl;
-    user.team.at(0).displayInfo();
+    //cout << endl << user.getName() << endl;
+    //user.team.at(0).displayInfo();
     while (menu() == 1){
 
     }
